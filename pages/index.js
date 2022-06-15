@@ -1,14 +1,18 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Sidebar from '../components/Sidebar';
-import Profile from '@components/Profile';
+import styles from 'styles/Home.module.css'
+import Sidebar from 'components/Sidebar';
+import Feed from 'components/Feed';
+import Header from 'components/Header';
+import Member from 'components/Member';
 
 export default function Home() {
   return (
-    <>
-      <Profile />
-      <Sidebar />
-    </>
+    <div className="w-full h-full">
+       <div className="">
+      <Header />
+      <Member />
+      </div>
+    </div>
   )
 }

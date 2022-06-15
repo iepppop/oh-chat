@@ -5,7 +5,7 @@
 
 @layer base {
   body{
-    @apply bg-white;
+    @apply bg-[#f8f8f8] text-[#0d0d0d] box-border w-full h-full; 
   }
 }
 
@@ -15,6 +15,15 @@
     rounded-full cursor-pointer w-[52px] h-[52px] xl:w-auto xl:h-auto xl:py-3 xl:px-4
     transition duration-200 ease-out;
   }
+
+  .logofonts{
+    font-family: "Poppins", sans-serif;
+  }
+
+  .fixwidth{
+    @apply max-w-screen-md m-auto w-full h-full p-4;
+  }
+
 }
 
 html,
