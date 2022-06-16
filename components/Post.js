@@ -7,7 +7,7 @@ const Post = ({ id, post, postPage }) => {
     const { currentUser } = useAuth();
     return (
         <div className={`${!postPage && "cursor-pointer"}`}>
-            <div className="" onClick={() => router.push(`/${id}`)}>
+            <div className="flex w-full" onClick={() => router.push(`/${id}`)}>
                 <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                 <img
                 src={post?.userImg}
@@ -20,9 +20,12 @@ const Post = ({ id, post, postPage }) => {
                 alt=""
                 className={`${post?.image ? "w-full object-cover" : "hidden"}`}
               />
-              <h1>{post.username ? post.username : emailname[0]}</h1>
-              <h2>{post?.text}</h2>
+              <div className="pl-2">
+              <h1 className="w-full font-bold">{post.username ? post.username : emailname[0]}</h1>
+              <h1 className="opacity-60 font-bold">@ {emailname[0]}</h1>
             </div>
+            </div>
+            <h2>{post?.text}</h2>
         </div>
     )
 }
