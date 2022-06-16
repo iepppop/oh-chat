@@ -9,7 +9,7 @@ import {
 }
   from "@firebase/firestore";
 import { db, storage } from "init-firebase";
-import { ref, uploadString } from 'firebase/storage';
+import { ref, uploadString, getDownloadURL } from 'firebase/storage';
 import {
   PhotographIcon,
   EmojiHappyIcon,
@@ -37,18 +37,18 @@ const Input = () => {
     });
 
     const imageRef = ref(storage, `posts/${docRef.id}/img`);
-    if (selectedFile) {
-      await uploadString(imageRef, selectedFile, "data_url").then(async () => {
+    if(selectedFile) {
+      await uploadString(imageRef, selectedFile, "data_url").then(async ()=> {
         const downloadURL = await getDownloadURL(imageRef);
-        await updateDoc(doc(db, "posts", docRef.id), {
+        await updateDoc(doc(db,"posts",docRef.id), {
           image: downloadURL,
         });
       });
     }
     setLoading(false);
-    console.log('성공');
     setInput("");
     setselectedFile(null);
+    console.log(imageRef)
   };
 
   const addImageToPost = (e) => {
@@ -106,7 +106,7 @@ const Input = () => {
           />
         </button>
         <button
-          className="disabled:hover:bg-[#333333] disabled:opacity-80 disabled:cursor-default
+          className="hover:bg-[#feb545] hover:text-white disabled:opacity-60 disabled:cursor-default
           p-2 border rounded-[20px] px-5 ml-auto text-sm mt-4 font-bold text-[#feb545]
           border-[#feb545]"
           onClick={sendPost}
