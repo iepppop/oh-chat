@@ -94,8 +94,7 @@ const Input = () => {
         <button>
           <PhotographIcon
             onClick={() => filePickerRef.current.click()}
-            width={20}
-            height={20}
+               
             className="mt-4"
           />
           <input
