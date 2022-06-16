@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 
 
-const register = () => {
+const Register = () => {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
@@ -46,4 +46,4 @@ const register = () => {
         </div>
     )
 }
-export default register;
+export default Register;
