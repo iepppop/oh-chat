@@ -22,6 +22,7 @@ const AuthContext = createContext({
     login: () => Promise,
     logout: () => Promise,
     upload:()=> Promise,
+    signInWithGoogle:()=>Promise,
 })
 
 export const useAuth = () => useContext(AuthContext);
@@ -48,6 +49,11 @@ export const AuthContextProvider = ({ children }) => {
 
     const logout = () => {
         signOut(auth);
+    }
+        
+    const signInWithGoogle = (email, password) => {
+        const provider = new GoogleAuthProvider();
+        return signInWithPopup(auth, provider);
     }
 
     const register = (email, password) => {
@@ -82,7 +88,8 @@ export const AuthContextProvider = ({ children }) => {
         logout,
         register,
         upload,
-        photoURL
+        photoURL,
+        signInWithGoogle,
     }
     return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }

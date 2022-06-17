@@ -8,7 +8,6 @@ import {
 const Profile = () => {
   const [photo, setPhoto] = useState(null);
   const [loading, setLoading] = useState(false);
-  // const [photoURL, setPhotoURL] = useState('https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png');
   const { currentUser, upload, photoURL } = useAuth();
   const imageInput = useRef();
 
@@ -26,9 +25,7 @@ const Profile = () => {
     upload(photo, currentUser, setLoading);
   }
 
-  useEffect(() => {
-    console.log(currentUser)
-  })
+  const emailname = (currentUser?.email || '').split('@');
 
   return (
     <div className="w-full h-[255px] flex flex-col">
@@ -47,13 +44,13 @@ const Profile = () => {
           </div>
           </div>
           <div className="m-3 pl-4">
-            <h1 className="font-bold text-sm inline-block">재짜니</h1>
+            <h1 className="font-bold text-sm inline-block">{currentUser.displayName}</h1>
             <div className="inline-block w-[12px] h-[12px] bg-[#ffb745] rounded-full ml-1">
               <span className="flex items-center justify-center w-full h-full">
               <CheckIcon className="text-white h-2 w-2 font-black" />
               </span>
             </div>
-            <h2 className="text-sm text-[#d2d2d2] -mt-[3px]">@jaechan</h2>
+            <h2 className="text-sm text-[#d2d2d2] -mt-[3px]">@ {emailname[0]}</h2>
           </div>
           {/* <button onClick={onCickImageUpload} className="">업로드</button>
           <button disabled={loading || !photo} onClick={handleClick}>완</button> */}

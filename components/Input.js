@@ -48,7 +48,6 @@ const Input = () => {
     setLoading(false);
     setInput("");
     setselectedFile(null);
-    console.log(imageRef)
   };
 
   const addImageToPost = (e) => {
@@ -93,9 +92,10 @@ const Input = () => {
       <div className="w-full h-full order-last flex items-center">
         <button>
           <PhotographIcon
-            onClick={() => filePickerRef.current.click()}
-               
+            onClick={() => filePickerRef.current.click()} 
             className="mt-4"
+            width={20} 
+            height={20}
           />
           <input
             hidden

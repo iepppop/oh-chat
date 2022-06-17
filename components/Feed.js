@@ -17,8 +17,8 @@ const Feed = () => {
 
   return (
     <div className="fixwidth">
-      <div className="bg-white rounded-lg overflow-hidden w-full h-full">
-        <div className="p-10 w-full h-full">
+      <div className="">
+        <div className="">
           {posts.map((post) => (
             <Post key={post.id} id={post.id} post={post.data()} />
           ))}
