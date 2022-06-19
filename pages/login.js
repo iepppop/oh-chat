@@ -19,8 +19,8 @@ const Login = () => {
   return (
     <div className="w-full h-screen flex bg-[#fff]">
       <div className="w-[35%] h-full bg-[#ffc057] relative overflow-hidden">
-      <div className="absolute -bottom-2">
-        <Image src={oil} fill="fixed"/>
+        <div className="absolute -bottom-2">
+          <Image src={oil} fill="fixed" />
         </div>
         <div className="p-[50px] flex flex-col w-full">
           <h5 className="text-[12px] font-semibold mb-2">오일리</h5>
@@ -42,8 +42,8 @@ const Login = () => {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center w-[65%] relative">
-        <button className="absolute left-10 top-8" onClick={()=>router.back()}>
-          <ChevronLeftIcon width={15} height={15}/>
+        <button className="absolute left-10 top-8" onClick={() => router.back()}>
+          <ChevronLeftIcon width={15} height={15} />
         </button>
         <h1 className="font-bold mb-1">오일리 로그인</h1>
         <h2 className="mb-10 text-[12px]">당신의 일상을 남겨주세요</h2>
@@ -52,11 +52,11 @@ const Login = () => {
           onSubmit={async e => {
             e.preventDefault();
             login(email, password)
-                .then((response) => {
-                    router.push('/');
-                })
-                .catch((error) => console.log(error))
-        }}>
+              .then((response) => {
+                router.push('/');
+              })
+              .catch((error) => console.log(error))
+          }}>
           <input
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -84,16 +84,16 @@ const Login = () => {
             type="submit"
             onClick={() =>
               signInWithGoogle()
-              .then((response) => {
-                router.push('/');
-            })
-            .catch((error) => console.log(error))
-              }
+                .then((response) => {
+                  router.push('/');
+                })
+                .catch((error) => console.log(error))
+            }
             className="flex justify-center border px-5 py-4 w-[300px] mt-2 bg-[#f8f8f8] text-sm font-bold"
           > <span className="mr-2 flex items-center h-full">
-            <Image src={google} width={15} height={15}/>
-           </span>
-           구글로 로그인
+              <Image src={google} width={15} height={15} />
+            </span>
+            구글로 로그인
           </button>
           <div className="w-[300px] text-right mt-3">
             <span className="text-[13px] mr-3 text-[#ababab]">아직 회원이 아니세요?</span>
@@ -106,7 +106,7 @@ const Login = () => {
         </form>
       </div>
       <div className="fixed w-[100px] h-[50px] right-1 bottom-0 ">
-        <h1 className="logofonts font-black ml-4 mt-1 inline-block" onClick={()=> router.push('/')}>OHily</h1>
+        <h1 className="logofonts font-black ml-4 mt-1 inline-block" onClick={() => router.push('/')}>OHily</h1>
       </div>
     </div>
   )

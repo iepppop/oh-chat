@@ -15,11 +15,11 @@ export default function Home() {
   const [imgMoadal, setImgMoadal] = useRecoilState(ImgEditState);
   
   return (
-    <div className="w-full h-full relative">
+    <>
       <Member />
       <Feed />
       {isOpen && <Modal />}
       {imgMoadal && <ImageEdit />}
-    </div>
+    </>
   )
 }
