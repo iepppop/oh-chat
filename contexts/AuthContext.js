@@ -60,7 +60,7 @@ export const AuthContextProvider = ({ children }) => {
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
-    const [photoURL, setPhotoURL] = useState('https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png');
+    const [photoURL, setPhotoURL] = useState('https://blog.kakaocdn.net/dn/yacY3/btrE5gQ0V4f/qikIkKvyENANHyvoeGZTX0/img.png');
 
     const upload = async (file, currentUser, setLoading) => {
         const fileRef = ref(storage, currentUser.uid + 'png');

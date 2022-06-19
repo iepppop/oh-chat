@@ -107,12 +107,6 @@ const Login = () => {
       </div>
       <div className="fixed w-[100px] h-[50px] right-1 bottom-0 ">
         <h1 className="logofonts font-black ml-4 mt-1 inline-block" onClick={()=> router.push('/')}>OHily</h1>
-        <div onClick={async e => {
-                                            e.preventDefault();
-                                            logout();
-                                            router.push('/');;
-                                        }}
-                                        >로그아웃</div>
       </div>
     </div>
   )

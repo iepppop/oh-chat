@@ -16,7 +16,7 @@ const Feed = () => {
   }, [db]);
 
   return (
-    <div className="fixwidth">
+    <div className="max-w-screen-md m-auto w-full h-full px-4">
       <div className="">
         <div className="">
           {posts.map((post) => (

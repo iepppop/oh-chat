@@ -76,7 +76,7 @@ const Post = ({ id, post, postPage }) => {
     console.log(currentUser)
 
     return (
-        <div className="mt-5">
+        <div className="mt-3">
             <div className="bg-white rounded-lg overflow-hidden w-full h-full">
                 <div className="flex w-[200px] h-[50px] m-10">
                     <div className="w-[50px] h-[50px] rounded-full overflow-hidden">

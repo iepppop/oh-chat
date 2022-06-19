@@ -11,6 +11,7 @@ import {
 import Header from '@components/Header';
 import { useState, useEffect } from 'react';
 import ScrollToTop from '@components/ScrollToTop';
+import Footer from '@components/Footer';
 
 function MyApp({ Component, pageProps }) {
 
@@ -19,6 +20,7 @@ function MyApp({ Component, pageProps }) {
       <RecoilRoot>
       <Header />
       <Component {...pageProps} />
+      <Footer />
       </RecoilRoot>
     </AuthContextProvider>
   )

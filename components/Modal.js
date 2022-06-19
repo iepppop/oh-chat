@@ -56,7 +56,7 @@ function Modal() {
 
     return (
         <Transition.Root show={isOpen} as={Fragment}>
-            <Dialog as="div" className="fixed z-50 inset-0 pt-8" onClose={setIsOpen}>
+            <Dialog as="div" className="relative z-10" onClose={setIsOpen}>
                 <div className="flex items-start justify-center min-h-[800px] sm:min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
                     <Transition.Child
                         as={Fragment}
@@ -79,7 +79,7 @@ function Modal() {
                         leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                         leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                     >
-                        <div className="inline-block align-bottom bg-[#f8f8f8] rounded-2xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-xl sm:w-full">
+                        <div className="fixed inset-0 inline-block align-bottom bg-[#f8f8f8] rounded-2xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-xl sm:w-full">
                             <div className="flex items-center px-1.5 py-2 border-b border-[#eee]">
                                 <div
                                     className="w-9 h-9 flex items-center justify-center xl:px-0"
@@ -91,7 +91,7 @@ function Modal() {
                             <div className="flex  pb-2.5 sm:px-6">
                                 <div className="w-full">
                                     <div className="text-[#6e767d] flex gap-x-3 relative">
-                                        <div className="flex w-[200px] h-[50px] m-5">
+                                        <div className="w-[200px] h-[50px] m-5 flex items-center justify-center">
                                             <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                                                 <img
                                                     src={post?.userImg ? post.userImg : 'https://o2hlounge.com/files/images/placeholder/avatar.png'}
@@ -106,7 +106,7 @@ function Modal() {
                                         </div>
                                     </div>
                                     <div className="m-5 mt-[10px]">
-                                    {post?.text}
+                                        {post?.text}
                                     </div>
                                     <div className="mt-7 flex space-x-3 w-full">
                                         <div className="flex-grow mt-2 px-5">
