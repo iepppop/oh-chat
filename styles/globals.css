@@ -5,7 +5,7 @@
 
 @layer base {
   body{
-    @apply bg-[#f8f8f8] text-[#0d0d0d] box-border w-full h-full; 
+    @apply  text-[#0d0d0d] box-border w-full h-full bg-[#f8f8f8]; 
   }
 }
 
