@@ -47,7 +47,7 @@ const Header = () => {
         <>
             {
                 router.pathname === '/login' || router.pathname === '/register' ? null : (
-                    <div className="bg-white h-[6.5vh] w-full border flex items-center border-b-[#eee] relative z-1">
+                    <div className="bg-white h-[6.5vh] w-full flex items-center shadow-2xl shadow-gray-500/10 relative z-1">
                         <div className={`${scrollActive ? 'bg-white border-b-[#eee] border fixed w-full z-10 opacity-90 text-[#090909] ' : 'w-full z-10 opacity-90 text-[#090909]'}`}>
                             <ScrollToTop />
                             <div className="fixwidth">

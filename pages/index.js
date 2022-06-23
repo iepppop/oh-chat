@@ -9,17 +9,19 @@ import Modal from '@components/Modal';
 import { modalState, postIdState, ImgEditState } from "atoms/modalAtom";
 import { useRecoilState } from "recoil";
 import ImageEdit from '@components/ImageEdit';
+import TopButton from '@components/TopButton';
 
 export default function Home() {
   const [isOpen, setIsOpen] = useRecoilState(modalState);
   const [imgMoadal, setImgMoadal] = useRecoilState(ImgEditState);
   
   return (
-    <>
+    <div>
       <Member />
       <Feed />
       {isOpen && <Modal />}
       {imgMoadal && <ImageEdit />}
-    </>
+      <TopButton />
+    </div>
   )
 }

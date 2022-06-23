@@ -73,11 +73,9 @@ const Post = ({ id, post, postPage }) => {
         }
     };
 
-    console.log(currentUser)
-
     return (
-        <div className="mt-3 last:mb-10">
-            <div className="bg-white rounded-lg overflow-hidden w-full h-full">
+        <div className="mt-5 rounded-lg overflow-hidden last:mb-10 bg-[#fff] shadow-[0_-15px_60px_-15px_rgba(0,0,0,0.3)] shadow-gray-500/10 ">
+            <div className=" w-full h-full ">
                 <div className="flex w-[200px] h-[50px] m-10">
                     <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                         <img
