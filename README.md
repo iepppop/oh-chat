@@ -1,5 +1,5 @@
 # 오일리
-![fa](https://user-images.githubusercontent.com/91578173/174974462-8a286bb2-2638-4809-bdb8-9f6f333e741b.png)
+![vcxv](https://user-images.githubusercontent.com/91578173/175542494-f8c15277-15fe-48ba-a556-5e25f6fad1d2.png)
 
 ### URL
 [[lezin-react.vercel.app](https://oh-chat.vercel.app)](https://oh-chat.vercel.app/)
