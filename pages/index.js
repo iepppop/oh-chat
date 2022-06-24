@@ -14,14 +14,16 @@ import TopButton from '@components/TopButton';
 export default function Home() {
   const [isOpen, setIsOpen] = useRecoilState(modalState);
   const [imgMoadal, setImgMoadal] = useRecoilState(ImgEditState);
-  
+
   return (
-    <div>
-      <Member />
-      <Feed />
-      {isOpen && <Modal />}
-      {imgMoadal && <ImageEdit />}
-      <TopButton />
+    <div className="max-w-[880px] m-auto h-full relative">
+      <div>
+        <Member />
+        <Feed />
+        {isOpen && <Modal />}
+        {imgMoadal && <ImageEdit />}
+        <TopButton />
+      </div>
     </div>
   )
 }
