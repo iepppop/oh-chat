@@ -64,6 +64,7 @@ const Post = ({ id, post, postPage }) => {
 
 
     const likePost = async () => {
+      if(currentUser){
         if (liked) {
             await deleteDoc(doc(db, "posts", id, "likes", currentUser.uid));
         } else {
@@ -71,6 +72,7 @@ const Post = ({ id, post, postPage }) => {
                 username: currentUser.email,
             });
         }
+      }
     };
 
     return (
@@ -109,8 +111,8 @@ const Post = ({ id, post, postPage }) => {
                                 e.stopPropagation();
                                 likePost();
                             }}
-                            className="border border-[#e8eaed] bg-[#f9fafb] py-2 px-3 text-[11px] font-medium rounded-[10px] flex items-center
-                        hover:bg-[#ffebcb] hover:text-[#fea61a] hover:border-[#ffebcb]"
+                            className={`border border-[#e8eaed] bg-[#f9fafb] py-2 px-3 text-[11px] font-medium rounded-[10px] flex items-center cursor-default
+                        ${currentUser && 'hover:bg-[#ffebcb] hover:text-[#fea61a] hover:border-[#ffebcb] cursor-pointer'}`}
                         >
                             {liked ? (
                                 <span className="border-[#fff8ed] text-[#ffa821]">
@@ -140,7 +142,7 @@ const Post = ({ id, post, postPage }) => {
                                 setIsOpen(true);
                             }}
                             className={`${postPage ?
-                                "overflow:hidden"
+                                "overflow-hidden"
                                 :
                                 "border border-[#e8eaed] bg-[#f9fafb] py-2 px-3 rounded-[10px] ml-3 text-[11px] font-medium flex items-center hover:bg-[#ffebcb] hover:text-[#fea61a] hover:border-[#ffebcb]"
                                 }`}
