@@ -90,7 +90,7 @@ function Modal() {
                             </div>
                             <div className="flex  pb-2.5 sm:px-6">
                                 <div className="w-full">
-                                    <div className="text-[#6e767d] flex gap-x-3 relative">
+                                    <div className="text-[#6e767d] flex gap-x-3 relative w-[500px]">
                                         <div className="w-[200px] h-[50px] m-5 flex items-center justify-center">
                                             <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
                                                 <img
